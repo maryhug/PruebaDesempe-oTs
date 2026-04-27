@@ -199,8 +199,6 @@ carthub/
 │   ├── app/
 │   │   ├── layout.tsx        # Layout raíz — envuelve toda la app con los providers
 │   │   ├── page.tsx          # Página raíz — redirige según rol
-│   │   ├── error.tsx         # Página de error global
-│   │   ├── not-found.tsx     # Página 404
 │   │   │
 │   │   ├── login/page.tsx          # Formulario de login
 │   │   ├── register/page.tsx       # Formulario de registro
