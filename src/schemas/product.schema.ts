@@ -6,17 +6,28 @@ export const createProductSchema = z.object({
     description: z.string().optional(),
     price: z.number().positive("El precio debe ser mayor a 0"),
     stock: z.number().int().min(0, "El stock no puede ser negativo"),
-    imageUrl: z.string().url("URL inválida").optional().or(z.literal("")),
+    // Acepta URL válida, string vacío, o undefined
+    imageUrl: z
+        .string()
+        .url("URL inválida")
+        .optional()
+        .or(z.literal(""))
+        .transform((val) => (val === "" ? undefined : val)), // convierte "" a undefined
 });
 
-// Schema para actualizar (todos los campos son opcionales)
+// Schema para actualizar (todos opcionales)
 export const updateProductSchema = z.object({
     name: z.string().min(2).optional(),
     description: z.string().optional(),
     price: z.number().positive().optional(),
     stock: z.number().int().min(0).optional(),
-    imageUrl: z.string().url().optional(),
     isActive: z.boolean().optional(),
+    imageUrl: z
+        .string()
+        .url("URL inválida")
+        .optional()
+        .or(z.literal(""))
+        .transform((val) => (val === "" ? undefined : val)),
 });
 
 export type CreateProductInput = z.infer<typeof createProductSchema>;

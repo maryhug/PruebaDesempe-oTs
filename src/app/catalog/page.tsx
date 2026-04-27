@@ -57,7 +57,8 @@ export default function CatalogPage() {
                             {/* Imagen o placeholder */}
                             <div className="bg-gray-100 rounded-lg h-40 flex items-center justify-center mb-4">
                                 {product.imageUrl ? (
-                                    <img src={product.imageUrl} alt={product.name} className="h-full object-contain rounded-lg" />
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img src={product.imageUrl} alt={product.name} className="h-full w-full object-cover rounded-lg" />
                                 ) : (
                                     <span className="text-4xl">📦</span>
                                 )}
