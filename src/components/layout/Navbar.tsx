@@ -51,6 +51,12 @@ export function Navbar() {
                             <Link href="/admin/products" className="text-gray-600 hover:text-gray-900">
                                 Productos
                             </Link>
+                            <Link href="/admin/orders" className="text-gray-600 hover:text-gray-900">
+                                Órdenes
+                            </Link>
+                            <Link href="/admin/users" className="text-gray-600 hover:text-gray-900">
+                                Usuarios
+                            </Link>
                             <Link href="/monitor" className="text-gray-600 hover:text-gray-900">
                                 Monitor
                             </Link>

@@ -2,6 +2,12 @@
 
 export type OrderStatus = "PENDING" | "CONFIRMED" | "CANCELLED";
 
+export interface User {
+    id: string;
+    name: string;
+    email: string;
+}
+
 export interface OrderItem {
     id: string;
     productId: string;
@@ -23,4 +29,5 @@ export interface Order {
     items: OrderItem[];
     createdAt: string;
     updatedAt: string;
+    user: User; 
 }

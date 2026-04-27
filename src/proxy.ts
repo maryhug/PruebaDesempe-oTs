@@ -14,7 +14,7 @@ const PUBLIC_ROUTES = [
 // Rutas solo para ADMIN
 const ADMIN_ROUTES = [
     "/monitor",
-    "/admin",
+    "/admin",       // ← esto cubre /admin/orders y /admin/products
     "/api/monitor",
     "/api/users",
     "/api/products/admin",
