@@ -1,0 +1,10 @@
+# Dependencias
+node_modules/
+
+# Construcción y caché
+.next/
+out/
+dist/
+.env
+*.log
+.DS_Store
